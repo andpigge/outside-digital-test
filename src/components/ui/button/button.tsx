@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import cn from 'classnames/bind';
+import cn from 'classnames';
 
 import styles from './button.module.css';
 
