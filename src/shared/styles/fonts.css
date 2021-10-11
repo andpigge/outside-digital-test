@@ -1,0 +1,26 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url('/public/fonts/Inter-Light.ttf') format('ttf');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('/public/fonts/Inter-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('/public/fonts/Inter-Medium.ttf') format('ttf');
+}

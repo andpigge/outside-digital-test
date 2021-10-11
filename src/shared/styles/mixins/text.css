@@ -1,0 +1,27 @@
+@define-mixin text {
+  margin: 0;
+  color: var(--white);
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@define-mixin textLarge {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@define-mixin textLarge {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@define-mixin textMedium {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@define-mixin textSmall {
+  font-size: 12px;
+  line-height: 16px;
+}

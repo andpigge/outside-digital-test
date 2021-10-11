@@ -1,0 +1,69 @@
+.buttonBig {
+  @mixin text;
+  @mixin textLarge;
+  cursor: pointer;
+  max-width: 280px;
+  width: 100%;
+  min-height: 56px;
+  border: none;
+  background: var(--gradient-red);
+  box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
+  border-radius: 6px;
+  transition: all .2s;
+
+  &:hover {
+    background: var(--red);
+  }
+}
+
+.buttonSmall {
+  @mixin text;
+  @mixin textMedium;
+  cursor: pointer;
+  max-width: 288px;
+  width: 100%;
+  min-height: 40px;
+  border: none;
+  background: var(--gradient-red);
+  box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
+  border-radius: 6px;
+  transition: all .2s;
+
+  &:hover {
+    background: var(--red);
+  }
+}
+
+.buttonText {
+  @mixin text;
+  @mixin textLarge;
+  cursor: pointer;
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+  color: var(--red);
+  transition: all .2s;
+
+  &:hover {
+    color: var(--orange);
+  }
+}
+
+.buttonMain {
+  @mixin text;
+  @mixin textLarge;
+  cursor: pointer;
+  max-width: 210px;
+  width: 100%;
+  min-height: 56px;
+  border: 1px solid var(--white);
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 6px;
+  transition: all .2s;
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--black);
+  }
+}

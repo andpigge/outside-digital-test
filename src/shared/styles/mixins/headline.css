@@ -1,0 +1,17 @@
+@define-mixin headline {
+  margin: 0;
+  color: var(--black);
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@define-mixin headline1 {
+  font-size: 28px;
+  line-height: 40px;
+}
+
+@define-mixin headline2 {
+  font-size: 14px;
+  line-height: 24px;
+}

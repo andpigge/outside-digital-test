@@ -4,16 +4,21 @@ import cn from 'classnames/bind';
 import styles from './button.module.css';
 
 interface IButtonProps {
-  text: string,
-  type: 'text' | 'button',
-  size: 'big' | 'small'
+  text: string
+  type: 'text' | 'button' | 'main'
+  size?: 'big' | 'small'
 }
 
 export const Button:FC<IButtonProps> = (props):JSX.Element => {
   const { text, type, size } = props;
 
   return (
-    <button>
+    <button className={cn({
+      [styles.buttonBig] : type === 'button' && size === 'big',
+      [styles.buttonSmall] : type === 'button' && size === 'small',
+      [styles.buttonText] : type === 'text',
+      [styles.buttonMain] : type === 'main',
+    })}>
       { text }
     </button>
   );
