@@ -5,7 +5,7 @@ import styles from './input.module.css';
 
 interface IInputProps {
   title: string
-  type: string
+  type: 'text' | 'password' | 'email'
   placeholder: string
   textError?: string
 }

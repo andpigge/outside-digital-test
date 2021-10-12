@@ -4,6 +4,7 @@ import type { NextPage } from 'next';
 import { Button } from '../components/ui/button';
 import { Tags } from '../components/ui/tags';
 import { Input } from '../components/ui/input';
+import { Checkbox } from '../components/ui/checkbox';
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +17,7 @@ const Home: NextPage = () => {
       {/* <Input title={ 'Ваша зарплата в месяц' } 
       type={ 'text' } placeholder={ 'Введите данные' } 
       textError={ 'Поле обязательно для заполнения' } /> */}
-      
+      {/* <Checkbox disabled={ true } /> */}
     </main>
   )
 }
