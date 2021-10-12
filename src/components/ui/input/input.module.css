@@ -1,0 +1,60 @@
+.text {
+  @mixin text;
+  @mixin textLarge;
+  margin-bottom: 8px;
+  color: var(--black);
+}
+
+.input {
+  padding: 8px 10px;
+  border: 1px solid #DFE3E6;
+  box-sizing: border-box;
+  border-radius: 3px;
+  max-width: 288px;
+  min-height: 40px;
+  width: 100%;
+  background-color: transparent;
+  box-sizing: border-box;
+  color: var(--black);
+
+  &:hover {
+    border-color: var(--black);
+  }
+
+  &:focus {
+    border-color: #DFE3E6;
+    outline: none;
+  }
+
+  &:placeholder {
+    @mixin text;
+    @mixin textLarge;
+    color: var(--gray);
+  }
+}
+
+.inputDisabled {
+  border-color: #808080;
+  color: #808080;
+}
+
+.inputError {
+  border-color: var(--input-red);
+  color: var(--input-red);
+
+  &:focus {
+    border-color: var(--input-red);
+    outline: none;
+  }
+
+  &:hover {
+    border-color: var(--input-red);
+  }
+}
+
+.textError {
+  @mixin text;
+  @mixin textSmall;
+  color: var(--input-red);
+  margin-top: 4px;
+}
