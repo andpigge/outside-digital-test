@@ -1,0 +1,5 @@
+@define-mixin bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}

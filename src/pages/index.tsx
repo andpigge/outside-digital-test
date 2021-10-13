@@ -6,7 +6,14 @@ import { Tags } from '../components/ui/tags';
 import { Input } from '../components/ui/input';
 import { Checkbox } from '../components/ui/checkbox';
 
+// Страницы
+import { Popup } from '../components/popup';
+
 const Home: NextPage = () => {
+  // const cb = (value: string) => {
+  //   console.log(value)
+  // }
+
   return (
     <main style={{ /* backgroundColor: 'grey' */ }}>
       {/* <Button text={ 'Кнопка' } type={ 'button' } size={ 'big' } />
@@ -18,6 +25,8 @@ const Home: NextPage = () => {
       type={ 'text' } placeholder={ 'Введите данные' } 
       textError={ 'Поле обязательно для заполнения' } /> */}
       {/* <Checkbox disabled={ true } /> */}
+      <Popup />
+      {/* <Tags cb={ cb } textList={['Платеж', 'Срок']} /> */}
     </main>
   )
 }

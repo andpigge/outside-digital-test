@@ -1,0 +1,10 @@
+.containerTags {
+  margin-bottom: 40px;
+}
+
+.text {
+  @mixin text;
+  @mixin textLarge;
+  color: var(--black);
+  margin-bottom: 24px;
+}

@@ -1,14 +1,10 @@
+.container {
+  display: flex;
+  cursor: pointer;
+}
+
 .checkbox {
   display: none;
-
-  &:checked + .checkboxItem {
-    background: var(--gradient-red);
-    background-image: url('../../../shared/icons/checkboxIcon.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 14px 11px;
-    border-color: transparent;
-  }
 }
 
 .checkboxItem {
@@ -19,6 +15,15 @@
   border: 1px solid #DFE3E6;
   box-sizing: border-box;
   background-color: transparent;
+}
+
+.active {
+  background: var(--gradient-red);
+  background-image: url('../../../shared/icons/checkboxIcon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 11px;
+  border-color: transparent;
 }
 
 .disabled {

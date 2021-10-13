@@ -1,0 +1,27 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  @mixin text;
+  @mixin textLarge;
+  color: var(--black);
+  border-bottom: 1px solid #DFE3E6;
+  margin-bottom: 16px;
+
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
+}
+
+.textList {
+  margin: 0;
+  margin-left: 12px;
+  padding-bottom: 16px;
+}
+
+.textSpecial {
+  color: #808080;
+}

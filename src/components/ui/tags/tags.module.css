@@ -1,3 +1,21 @@
+.container {
+  cursor: pointer;
+  margin-right: 8px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.radio {
+  display: none;
+
+  &:checked + .tags {
+    background: var(--gradient-red);
+    color: var(--white);
+  }
+}
+
 .tags {
   @mixin text;
   @mixin textLarge;
