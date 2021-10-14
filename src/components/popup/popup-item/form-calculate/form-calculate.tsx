@@ -15,7 +15,7 @@ import { Input } from '../../../ui/input';
 
 export const FormCalculate:FC<IFormCalculateProps> = ({ calculate, addSalaryValue, inputValue }):JSX.Element => {
   const cbInput = (value: string) => {
-    const checkNumber = /^\d+$/;
+    const checkNumber = /^\d*$/;
     if (checkNumber.test(value)) {
       addSalaryValue(value);
     }
