@@ -1,4 +1,6 @@
 .containerTags {
+  display: flex;
+  align-items: center;
   margin-bottom: 40px;
 }
 
@@ -6,5 +8,16 @@
   @mixin text;
   @mixin textLarge;
   color: var(--black);
-  margin-bottom: 24px;
+  margin-right: 32px;
+}
+
+@media screen and (max-width: 599px) {
+  .containerTags {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .text {
+    margin-bottom: 24px;
+  }
 }

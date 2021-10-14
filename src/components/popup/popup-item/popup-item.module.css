@@ -9,6 +9,8 @@
 }
 
 .popupContainer {
+  display: flex;
+  flex-direction: column;
   position: relative;
   margin: 0 auto;
   min-height: 476px;
@@ -42,4 +44,38 @@
   @mixin textLarge;
   color: var(--black);
   margin-bottom: 24px;
+}
+
+.containerButton {
+  margin-top: auto;
+  display: flex;
+}
+
+@media screen and (max-width: 769px) {
+  .popupContainer {
+    max-width: 450px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .popup {
+    background-color: rgba(0, 0, 0, 0.3);
+    min-height: calc(100vh - 120px);
+    padding: 0;
+    padding-bottom: 120px;
+  }
+
+  .popupContainer {
+    padding: 32px 16px 16px;
+    min-height: 568px;
+    border-radius: 0px;
+  }
+
+  .title {
+    @mixin headline2;
+  }
+
+  .desc {
+    @mixin textMedium;
+  }
 }

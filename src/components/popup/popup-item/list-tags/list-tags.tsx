@@ -20,7 +20,9 @@ export const ListTags:FC<IListTagsProps> = ():JSX.Element => {
       <p className={ cn(styles.text) }>
           Что уменьшаем?
       </p>
-      <Tags textList={['Платеж', 'Срок']} cb={ cbTags } />
+      <div>
+        <Tags textList={['Платеж', 'Срок']} cb={ cbTags } />
+      </div>
     </div>
   );
 };

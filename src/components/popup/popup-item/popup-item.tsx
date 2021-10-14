@@ -68,7 +68,15 @@ export const PopupItem:FC<IPopupProps> = ({ cb }):JSX.Element => {
 
         <ListTags />
 
-        <Button text={ 'Добавить' } type={ 'button' } cb={ handlerСalculate } size={ 'big' } disabled={ Number(inputValue) < 30000 } />
+        <div className={ cn(styles.containerButton) }>
+          <Button 
+            text={ 'Добавить' } 
+            type={ 'button' } 
+            cb={ handlerСalculate } 
+            size={ 'big' } 
+            disabled={ Number(inputValue) < 30000 } 
+          />
+        </div>
       </div>
     </div>
   );
