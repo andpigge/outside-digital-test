@@ -1,0 +1,11 @@
+@define-mixin buttonSmall {
+  @mixin textMedium;
+  min-width: 288px;
+  min-height: 40px;
+}
+
+@define-mixin buttonMainSmall {
+  @mixin textMedium;
+  min-height: 40px;
+  max-width: 150px;
+}

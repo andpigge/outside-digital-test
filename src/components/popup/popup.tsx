@@ -26,7 +26,7 @@ export const Popup:FC = ():JSX.Element => {
     <>
       <section className={ cn(styles.container) }>
         <div className={ cn(styles.containerButton) }>
-          <Button text={ 'Налоговый вычет' } type={ 'main' } cb={ openPopup } />
+          <Button text={ 'Налоговый вычет' } type={ 'main' } size='big' cb={ openPopup } />
         </div>
         { popupActive && <PopupItem cb={ cbButton } /> }
       </section>

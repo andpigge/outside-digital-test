@@ -1,9 +1,7 @@
-.buttonBig {
+.button {
   @mixin text;
-  @mixin textLarge;
   cursor: pointer;
   width: 100%;
-  min-height: 56px;
   border: none;
   background: var(--gradient-red);
   box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
@@ -15,20 +13,59 @@
   }
 }
 
+.buttonBig {
+  @mixin textLarge;
+  min-width: 280px;
+  min-height: 56px;
+}
+
 .buttonSmall {
+  @mixin buttonSmall;
+}
+
+.buttonDisabled {
+  background: none;
+  background-color: #BEC5CC;
+  box-shadow: none;
+
+  &:hover {
+    background-color: #BEC5CC;
+    color: var(--white);
+  }
+}
+
+.buttonMain {
   @mixin text;
-  @mixin textMedium;
   cursor: pointer;
   width: 100%;
-  min-height: 40px;
-  border: none;
-  background: var(--gradient-red);
-  box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
+  border: 1px solid var(--white);
+  background-color: transparent;
+  box-sizing: border-box;
   border-radius: 6px;
   transition: all .2s;
 
   &:hover {
-    background: var(--red);
+    background-color: var(--white);
+    color: var(--black);
+  }
+}
+
+.buttonMainBig {
+  @mixin textLarge;
+  min-height: 56px;
+  max-width: 200px;
+}
+
+.buttonMainSmall {
+  @mixin buttonMainSmall;
+}
+
+.buttonMainDisabled {
+  background-color: #BEC5CC;
+
+  &:hover {
+    background-color: #BEC5CC;
+    color: var(--white);
   }
 }
 
@@ -48,32 +85,12 @@
   }
 }
 
-.buttonMain {
-  @mixin text;
-  @mixin textLarge;
-  cursor: pointer;
-  max-width: 210px;
-  width: 100%;
-  min-height: 56px;
-  border: 1px solid var(--white);
-  background-color: transparent;
-  box-sizing: border-box;
-  border-radius: 6px;
-  transition: all .2s;
-
-  &:hover {
-    background-color: var(--white);
-    color: var(--black);
+@media screen and (max-width: 321px) {
+  .buttonBig {
+    @mixin buttonSmall;
   }
-}
 
-.disabled {
-  background: none;
-  background-color: #BEC5CC;
-  box-shadow: none;
-
-  &:hover {
-    background-color: #BEC5CC;
-    color: var(--white);
+  .buttonMainBig {
+    @mixin buttonMainSmall;
   }
 }

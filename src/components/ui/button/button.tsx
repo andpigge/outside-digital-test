@@ -15,15 +15,25 @@ export const Button:FC<IButtonProps> = (props):JSX.Element => {
   const { text, type, cb, size, disabled } = props;
 
   return (
-    <button onClick={ cb } className={cn({
-      [styles.buttonBig] : type === 'button' && size === 'big',
-      [styles.buttonSmall] : type === 'button' && size === 'small',
-      [styles.buttonText] : type === 'text',
-      [styles.buttonMain] : type === 'main',
-      [styles.disabled] : disabled && type !== 'text',
-    })}
-    disabled={ disabled }>
-      { text }
-    </button>
+    <>
+      { type === 'button' &&
+      <button onClick={ cb } className={cn(styles.button, {
+        [styles.buttonBig] : size === 'big',
+        [styles.buttonSmall] : size === 'small',
+        [styles.buttonDisabled] : disabled === true
+      })}
+      disabled={ disabled }>{ text }</button> }
+
+      { type === 'main' &&
+      <button onClick={ cb } className={cn(styles.buttonMain, {
+        [styles.buttonMainBig] : size === 'big',
+        [styles.buttonMainSmall] : size === 'small',
+        [styles.buttonMainDisabled] : disabled === true
+      })}
+      disabled={ disabled }>{ text }</button> }
+
+      { type === 'text' &&
+      <button onClick={ cb } className={cn(styles.buttonText)} disabled={ disabled }>{ text }</button> }
+    </>
   );
 };
