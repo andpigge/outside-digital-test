@@ -24,7 +24,7 @@ export const ListSum:FC<IFormCalculateProps> = ({ sumYear }):JSX.Element => {
               return <li className={ cn(styles.item) } key={i}>
                 <Checkbox item={ item }>
                   <p className={ cn(styles.textList) }>
-                    {`${item} рублей`}
+                    {`${item} рублей `}
                     <span className={ cn(styles.textSpecial) }>{ caseWords[i] }</span>
                   </p>
                 </Checkbox>
